@@ -1,0 +1,60 @@
+ COM 9 			CH340
+COM3  			DAP USART2
+
+
+PA9			USART1-TX	PID
+PA10			USART1-RX	PID
+
+
+PA2			USART2-TX	打印调试
+PA3			USART2-RX	打印调试
+
+FSMC			LDC....
+
+
+PB5			LED1
+PE5			LED2
+
+
+PA0			KEY_UP	
+PE2			KEY0
+PE3			KEY1
+PE4			KEY2
+
+//直流有刷电机
+PA8			TIM1_CH1
+PB13			TIM1_CH1N
+PF10			GPIO		刹车
+PA6			TIM3 编码器模式	编码器A相
+PA7			TIM3 编码器模式	编码器B相
+TIM2定时器中断		0.5ms更新中断	
+
+
+//步进电机
+EN+			3.3V
+DIR+			3.3V
+PUL+			3.3V
+
+EN-			PC2
+DIR-			PC1
+PUL-			PA6		TIM4_CH1
+
+//直流无刷电机
+上桥臂
+UH			PC6		TIM8_CH1
+VH  			PC7		TIM8_CH2
+WH			PC8		TIM8_CH3
+	
+下桥臂	
+UL			PB9		普通IO 	
+VL			PB7 		普通IO
+WL			PB1		普通IO
+
+刹车引脚			PG15		普通IO
+
+霍尔传感器
+U-PB10			容忍5VIO
+V-PB11			容忍5VIO
+W-PB12			容忍5VIO
+
+定时器8更新中断
